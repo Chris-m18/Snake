@@ -12,6 +12,44 @@ window.onload = function () {
 
 };
 
+//gameworld
+let gridSize = tileSize = 20;  // 20 * 20 = 400
+let nextX = nextY = 0;
+
+//apple
+let appleX = (appleY = 15);
+
+//Move snake
+snakeX += nextX;
+snakeY += nextY;
+
+//snkae over game world 
+if (snakeX < 0) {
+  snakeX = gridSize - 1;
+}
+if (snakeX > gridSize - 1) {
+  snakeX = 0;
+}
+if (snakeY < 0) {
+  snakeY = gridSize - 1;
+}
+if (snakeY > gridSize - 1) {
+  snakeY = 0;
+}
+
+//snakebit 
+
+
+
+
+
+//snake
+let defaultTailSize = 3;
+let tailSize = defaultTailSize
+let snakeTrail = [];
+let snakeX = snakeY = 10;
+
+
 function keyDownEvent(e) {
   switch (e.KeyCode) {
     case 37:
@@ -31,4 +69,6 @@ function keyDownEvent(e) {
       nextY = 1;
       break;
   }
-}
+};
+
+
